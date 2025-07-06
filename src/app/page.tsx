@@ -58,6 +58,12 @@ export default function Home() {
 	const [editingId, setEditingId] = useState<number | null>(null);
 	const [formMode, setFormMode] = useState<'add' | 'edit'>('add');
 
+	function handleAdd() {
+		setEditingId(null);
+		setFormMode('add');
+		setVisibleForm(true);
+	}
+
 	function handleFormSubmit(data: { title: string; description: string }) {
 		setItems(prevItems => {
 			if (formMode === 'add') {
@@ -76,6 +82,8 @@ export default function Home() {
 			}
 			return prevItems;
 		});
+		setEditingId(null);
+		setFormMode('add');
 		setVisibleForm(false);
 	}
 
@@ -196,7 +204,7 @@ export default function Home() {
 								/>
 							))}
 						</SortableContext>
-						<AddCard onForm={() => setVisibleForm(true)} />
+						<AddCard onForm={handleAdd} />
 					</main>
 				)}
 				<DragOverlay dropAnimation={dropAnimation}>

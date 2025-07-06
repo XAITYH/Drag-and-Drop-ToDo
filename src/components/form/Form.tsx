@@ -25,40 +25,24 @@ const Form = ({
 	const [title, setTitle] = useState('');
 	const [description, setDescription] = useState('');
 
-	const titleTextareaRef = useRef<HTMLTextAreaElement>(null);
-	const descTextareaRef = useRef<HTMLTextAreaElement>(null);
-
-	// function adjuctTextareaHeight(ref: RefObject<HTMLTextAreaElement | null) {
-	// 	if (ref) {
-	// 		ref.current.style.height = 'auto';
-	// 		ref.current.style.height = `${ref.current.scrollHeight}px`;
-	// 	}
-	// }
-
-	// useEffect(() => {
-	// 	adjuctTextareaHeight(titleTextareaRef);
-	// 	adjuctTextareaHeight(descTextareaRef);
-	// }, [title, description]);
-
 	useEffect(() => {
-		if (mode === 'edit' && initialData) {
+		if (mode === 'add') {
+			setTitle('');
+			setDescription('');
+		} else if (mode === 'edit' && initialData) {
 			setTitle(initialData.title);
 			setDescription(initialData.description);
 		}
 	}, [mode, initialData]);
 
-	const handleSubmit = (e: FormEvent) => {
+	function handleSubmit(e: FormEvent) {
 		e.preventDefault();
-		if (title !== '' && description !== '') {
-			onFormSubmit({ title, description });
-		} else if (title === '' && description !== '') {
-			alert('Title is blank');
-		} else if (title !== '' && description === '') {
-			alert('Description is blank');
-		} else {
-			alert('Your note is blank');
+		if (!title.trim() || !description.trim()) {
+			alert('Please fill all fields');
+			return;
 		}
-	};
+		onFormSubmit({ title, description });
+	}
 
 	return (
 		<form className={styles.form}>
