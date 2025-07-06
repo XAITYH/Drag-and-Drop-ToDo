@@ -1,0 +1,41 @@
+.buttons {
+	position: absolute;
+	right: 10px;
+	display: flex;
+	gap: 2px;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: hsl(52, 90%, 75%);
+	transition: all 0.3s ease;
+}
+
+.btn:hover {
+	color: hsl(52, 90%, 35%);
+}
+
+@media (max-width: 1200px) {
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		right: 0;
+		bottom: 0;
+	}
+
+	.btn {
+		font-size: 16px;
+		height: 70px;
+		border: 3px solid hsl(52, 90%, 75%);
+	}
+
+	.btn:last-of-type {
+		border-radius: 0 0 5px 5px;
+	}
+}

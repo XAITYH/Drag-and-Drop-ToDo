@@ -1,0 +1,90 @@
+.form {
+	width: 250px;
+	max-height: 80vh;
+	background-color: hsl(51, 23%, 6%);
+	color: hsl(52, 90%, 75%);
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 0 4px hsl(51, 23%, 6%);
+	overflow: hidden;
+	transform-origin: 0 0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin: 30px auto;
+	gap: 12px;
+}
+
+.form_header {
+	height: 22px;
+	background-color: hsl(51, 23%, 6%);
+	display: flex;
+	align-items: center;
+	padding-bottom: 8px;
+}
+
+.num {
+	border: 2px solid hsl(52, 90%, 75%);
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	user-select: none;
+}
+
+.text_cont {
+	height: 100%;
+	overflow-y: auto;
+	scrollbar-width: auto;
+	padding: 5px;
+}
+
+.form_title {
+	font-size: 18px;
+	margin-bottom: 8px;
+	height: 3.5vh;
+}
+
+.form_title:focus,
+.form_description:focus {
+	outline: 2px solid hsl(52, 90%, 75%);
+	border-radius: 5px;
+}
+
+.form_title,
+.form_description {
+	resize: none;
+	overflow: hidden;
+	width: 95%;
+	color: hsl(52, 90%, 75%);
+	background-color: inherit;
+	border: none;
+	padding: 8px 3px 8px 3px;
+	margin-left: -1px;
+}
+
+.form_description {
+	min-height: 30vh;
+}
+
+.text_cont::-webkit-scrollbar {
+	width: 4px;
+}
+
+.text_cont::-webkit-scrollbar-thumb {
+	background: #ffffff4a;
+	border-radius: 3px;
+}
+
+.text_cont::-webkit-scrollbar-thumb:hover {
+	background: #888;
+}
+
+.line {
+	margin-top: 0;
+	border: 2px solid #ffffff4a;
+	border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+.add_buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.btn {
+	background-color: hsl(52, 78%, 75%);
+	width: 50%;
+	height: 10vh;
+	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 2px solid hsl(51, 23%, 6%);
+	border-radius: 10px;
+}
+
+.btn:hover {
+	background-color: hsl(52, 99%, 75%);
+}

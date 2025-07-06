@@ -1,0 +1,6 @@
+html,
+body {
+	margin: 0;
+	background-color: hsl(52, 90%, 75%);
+	font-family: 'geist', sans-serif;
+}

@@ -1,0 +1,38 @@
+.card {
+	width: max-content;
+	max-width: 250px;
+	min-width: 150px;
+	height: 225px;
+	box-sizing: border-box;
+	background-color: hsl(51, 23%, 6%);
+	color: hsl(52, 90%, 75%);
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 0 5px hsl(51, 23%, 6%);
+	overflow: hidden;
+	position: relative;
+	transform-origin: 0 0;
+	user-select: none;
+}
+
+.add_card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	color: #888;
+	font-size: 65px;
+	transition: all 0.3s ease;
+}
+
+.add_card:hover {
+	color: hsl(52, 90%, 75%);
+}
+
+.add_icon {
+	transition: all 0.3s ease;
+}
+
+.add_card:hover .add_icon {
+	filter: drop-shadow(0 0 5px hsl(52, 90%, 75%));
+}

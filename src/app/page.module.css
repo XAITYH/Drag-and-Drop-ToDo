@@ -1,0 +1,25 @@
+.header {
+	display: flex;
+	font-size: 36px;
+	color: hsl(52, 90%, 75%);
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(51, 23%, 6%);
+	height: 72px;
+	box-shadow: 0 0 15px hsl(51, 23%, 6%);
+	border-radius: 0 0 30px 30px;
+}
+
+.main {
+	margin-top: 50px;
+	display: flex;
+	gap: 50px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+	.header {
+		font-size: 28px;
+	}
+}
